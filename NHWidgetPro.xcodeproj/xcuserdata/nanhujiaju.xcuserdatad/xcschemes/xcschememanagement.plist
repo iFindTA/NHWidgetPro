@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>NHActionWidget.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 		<key>NHTodayWidget.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -48,6 +53,11 @@
 			<true/>
 		</dict>
 		<key>604225501CC8862F00677606</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>60E0001F1CC8CDDA0014614C</key>
 		<dict>
 			<key>primary</key>
 			<true/>

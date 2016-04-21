@@ -10,6 +10,8 @@
 #import <NotificationCenter/NotificationCenter.h>
 #import "TodayKit.h"
 
+//NSExtensionMainStoryboard
+//NSExtensionPrincipalClass
 @interface TodayViewController () <NCWidgetProviding>
 
 @end
@@ -40,14 +42,25 @@
         self.info.text = info;
         
         if (idx == 0) {
-            
+            [self showJump];
         }
     }];
+}
+
+- (void)showJump {
     
-//    [self.extensionContext openURL:[NSURL URLWithString:@"NHToday://finished"] completionHandler:^(BOOL success) {
-//        
-//    }];
-    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame = CGRectMake(10, 20, 100, 50);
+    [btn setTitle:@"open" forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [btn addTarget:self action:@selector(openHostApp) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
+}
+
+- (void)openHostApp {
+    [self.extensionContext openURL:[NSURL URLWithString:@"NHToday://action:open"] completionHandler:^(BOOL success) {
+        
+    }];
 }
 
 - (BOOL)isPortait {

@@ -8,8 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void(^bbb)();
-
+NS_ASSUME_NONNULL_BEGIN
 
 @interface NHTodayKit : NSObject
 
@@ -20,6 +19,26 @@ typedef void(^bbb)();
  */
 + (id)shared;
 
+/**
+ *  @brief generate timer by left interval
+ *
+ *  @param left left time interval
+ *  @param back callback
+ *
+ *  @return the timer
+ */
 - (NSTimer *)getTimer:(NSTimeInterval)left withCallback:(void(^)(NSUInteger))back;
+
+/**
+ *  @brief get newest data
+ *
+ *  @param path   request path
+ *  @param ps     params
+ *  @param succes block
+ *  @param failer block
+ */
+- (void)get:(NSString *)path params:(id)ps success:(void(^)(id))succes failer:(void(^)(NSError *))failer;
+
+NS_ASSUME_NONNULL_END
 
 @end

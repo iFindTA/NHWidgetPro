@@ -42,4 +42,16 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (BOOL)application:(UIApplication *)application openURL:(nonnull NSURL *)url options:(nonnull NSDictionary<NSString *,id> *)options {
+    if ([url.scheme isEqualToString:@"NHToday"]) {
+        
+        if ([url.absoluteString rangeOfString:@"action:open"].location != NSNotFound) {
+            NSLog(@"Extension Widget 打开主程序");
+        }
+        
+        return true;
+    }
+    return false;
+}
+
 @end

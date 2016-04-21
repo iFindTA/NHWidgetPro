@@ -81,4 +81,8 @@ static NHTodayKit *instance = nil;
     }
 }
 
+- (void)get:(NSString *)path params:(id)ps success:(void (^)(id _Nonnull))succes failer:(void (^)(NSError * _Nonnull))failer {
+    
+}
+
 @end

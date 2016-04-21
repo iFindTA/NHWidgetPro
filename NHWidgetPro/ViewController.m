@@ -16,7 +16,7 @@
 @implementation ViewController{
     NSTimer         *_timer;
     UILabel         *_label;
-    __block NSUInteger      _NUM_IDX;
+    NSUInteger      _NUM_IDX;
 }
 
 - (void)viewDidLoad {
@@ -26,12 +26,17 @@
     
     _NUM_IDX = 60;
     [self.view addSubview:[self lable]];
-    _timer = [[NHTodayKit shared] getTimer:60 withCallback:^(NSUInteger idx) {
+    _timer = [[NHTodayKit shared] getTimer:_NUM_IDX withCallback:^(NSUInteger idx) {
         _NUM_IDX = idx;
         _label.text = [self info];
     }];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(willAsginActive) name:UIApplicationWillResignActiveNotification object:nil];
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
 }
 
 - (void)didReceiveMemoryWarning {

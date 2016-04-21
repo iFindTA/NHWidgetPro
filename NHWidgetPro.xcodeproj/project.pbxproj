@@ -27,6 +27,9 @@
 		604225691CC8867E00677606 /* NHTodayKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 604225671CC8867E00677606 /* NHTodayKit.m */; };
 		6042256A1CC89B3300677606 /* TodayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 604225481CC8862F00677606 /* TodayKit.framework */; };
 		6042256E1CC8A1E400677606 /* NHTodayKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6042256D1CC8A1E400677606 /* NHTodayKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		60E000241CC8CDDA0014614C /* ActionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E000231CC8CDDA0014614C /* ActionViewController.m */; };
+		60E000271CC8CDDA0014614C /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60E000251CC8CDDA0014614C /* MainInterface.storyboard */; };
+		60E0002B1CC8CDDA0014614C /* NHActionWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 60E000201CC8CDDA0014614C /* NHActionWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +75,13 @@
 			remoteGlobalIDString = 604225471CC8862F00677606;
 			remoteInfo = TodayKit;
 		};
+		60E000291CC8CDDA0014614C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 604224ED1CC87E3D00677606 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 60E0001F1CC8CDDA0014614C;
+			remoteInfo = NHActionWidget;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -81,6 +91,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				60E0002B1CC8CDDA0014614C /* NHActionWidget.appex in Embed App Extensions */,
 				6042253D1CC87ED800677606 /* NHTodayWidget.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -132,6 +143,11 @@
 		604225671CC8867E00677606 /* NHTodayKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NHTodayKit.m; sourceTree = "<group>"; };
 		6042256D1CC8A1E400677606 /* NHTodayKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NHTodayKit.h; sourceTree = "<group>"; };
 		6042256F1CC8A38E00677606 /* NHTodayWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = NHTodayWidget.entitlements; sourceTree = "<group>"; };
+		60E000201CC8CDDA0014614C /* NHActionWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NHActionWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		60E000221CC8CDDA0014614C /* ActionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionViewController.h; sourceTree = "<group>"; };
+		60E000231CC8CDDA0014614C /* ActionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActionViewController.m; sourceTree = "<group>"; };
+		60E000261CC8CDDA0014614C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		60E000281CC8CDDA0014614C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +197,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		60E0001D1CC8CDDA0014614C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -193,6 +216,7 @@
 				604225331CC87ED700677606 /* NHTodayWidget */,
 				604225491CC8862F00677606 /* TodayKit */,
 				604225571CC8862F00677606 /* TodayKitTests */,
+				60E000211CC8CDDA0014614C /* NHActionWidget */,
 				604225301CC87ED700677606 /* Frameworks */,
 				604224F61CC87E3D00677606 /* Products */,
 			);
@@ -207,6 +231,7 @@
 				6042252F1CC87ED700677606 /* NHTodayWidget.appex */,
 				604225481CC8862F00677606 /* TodayKit.framework */,
 				604225511CC8862F00677606 /* TodayKitTests.xctest */,
+				60E000201CC8CDDA0014614C /* NHActionWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -294,6 +319,17 @@
 			path = TodayKitTests;
 			sourceTree = "<group>";
 		};
+		60E000211CC8CDDA0014614C /* NHActionWidget */ = {
+			isa = PBXGroup;
+			children = (
+				60E000221CC8CDDA0014614C /* ActionViewController.h */,
+				60E000231CC8CDDA0014614C /* ActionViewController.m */,
+				60E000251CC8CDDA0014614C /* MainInterface.storyboard */,
+				60E000281CC8CDDA0014614C /* Info.plist */,
+			);
+			path = NHActionWidget;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -324,6 +360,7 @@
 			dependencies = (
 				6042253C1CC87ED800677606 /* PBXTargetDependency */,
 				6042255C1CC8862F00677606 /* PBXTargetDependency */,
+				60E0002A1CC8CDDA0014614C /* PBXTargetDependency */,
 			);
 			name = NHWidgetPro;
 			productName = NHWidgetPro;
@@ -420,6 +457,23 @@
 			productReference = 604225511CC8862F00677606 /* TodayKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		60E0001F1CC8CDDA0014614C /* NHActionWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 60E0002E1CC8CDDA0014614C /* Build configuration list for PBXNativeTarget "NHActionWidget" */;
+			buildPhases = (
+				60E0001C1CC8CDDA0014614C /* Sources */,
+				60E0001D1CC8CDDA0014614C /* Frameworks */,
+				60E0001E1CC8CDDA0014614C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NHActionWidget;
+			productName = NHActionWidget;
+			productReference = 60E000201CC8CDDA0014614C /* NHActionWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -463,6 +517,10 @@
 						CreatedOnToolsVersion = 7.3;
 						TestTargetID = 604224F41CC87E3D00677606;
 					};
+					60E0001F1CC8CDDA0014614C = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 4WJ4F55RGP;
+					};
 				};
 			};
 			buildConfigurationList = 604224F01CC87E3D00677606 /* Build configuration list for PBXProject "NHWidgetPro" */;
@@ -484,6 +542,7 @@
 				6042252E1CC87ED700677606 /* NHTodayWidget */,
 				604225471CC8862F00677606 /* TodayKit */,
 				604225501CC8862F00677606 /* TodayKitTests */,
+				60E0001F1CC8CDDA0014614C /* NHActionWidget */,
 			);
 		};
 /* End PBXProject section */
@@ -532,6 +591,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60E0001E1CC8CDDA0014614C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60E000271CC8CDDA0014614C /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +655,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		60E0001C1CC8CDDA0014614C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60E000241CC8CDDA0014614C /* ActionViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -621,6 +696,11 @@
 			target = 604225471CC8862F00677606 /* TodayKit */;
 			targetProxy = 6042255B1CC8862F00677606 /* PBXContainerItemProxy */;
 		};
+		60E0002A1CC8CDDA0014614C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 60E0001F1CC8CDDA0014614C /* NHActionWidget */;
+			targetProxy = 60E000291CC8CDDA0014614C /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -644,6 +724,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				604225381CC87ED700677606 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		60E000251CC8CDDA0014614C /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				60E000261CC8CDDA0014614C /* Base */,
 			);
 			name = MainInterface.storyboard;
 			sourceTree = "<group>";
@@ -897,6 +985,28 @@
 			};
 			name = Release;
 		};
+		60E0002C1CC8CDDA0014614C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = NHActionWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = PullBear.NHWidgetPro.NHActionWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		60E0002D1CC8CDDA0014614C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = NHActionWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = PullBear.NHWidgetPro.NHActionWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -943,6 +1053,7 @@
 				6042253F1CC87ED800677606 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6042255F1CC8862F00677606 /* Build configuration list for PBXNativeTarget "TodayKit" */ = {
 			isa = XCConfigurationList;
@@ -951,12 +1062,22 @@
 				604225611CC8862F00677606 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		604225631CC8862F00677606 /* Build configuration list for PBXNativeTarget "TodayKitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				604225641CC8862F00677606 /* Debug */,
 				604225651CC8862F00677606 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		60E0002E1CC8CDDA0014614C /* Build configuration list for PBXNativeTarget "NHActionWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60E0002C1CC8CDDA0014614C /* Debug */,
+				60E0002D1CC8CDDA0014614C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
